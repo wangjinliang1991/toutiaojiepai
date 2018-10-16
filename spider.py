@@ -20,20 +20,20 @@ headers = {
     }
 
 def get_page_index(offset, keyword):
-    data = {
+    params = {
         'offset': offset,
         'format': 'json',
         'keyword': keyword,
         'autoload': 'true',
         'count': '20',
         'cur_tab': 3,
-        'from': 'search_tab'
+        'from': 'gallery'
     }
-    url = 'https://www.toutiao.com/search_content/?' + urlencode(data)
+    url = 'https://www.toutiao.com/search_content/?' + urlencode(params)
     response = requests.get(url, headers=headers)
     try:
         if response.status_code==200:
-            return response.text
+            return response.json()
         return None
     except RequestException:
         print("请求索引页错误")
