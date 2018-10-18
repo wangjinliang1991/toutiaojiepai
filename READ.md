@@ -8,6 +8,5 @@
 * 查看Headers选项卡，GET请求，URL参数有offset format keyword autoload count cur_tab 比较规律，只有offset改变
 
 ### 步骤 还是请求、爬取、保存
-#### 两种方式，第一种最简洁
-1. test.py，直接在原页面做所有事情，注意：**需要加工image的信息，小图变大图**
-2. spider.py 打开新的链接，再爬取大图所在页
+* 注意：
+    需要加工image的信息，小图变大图
